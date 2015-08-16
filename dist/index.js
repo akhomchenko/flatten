@@ -14,8 +14,6 @@ var pushToArray = function pushToArray(array, items) {
   for (var i = 0; i < items.length; i++) {
     array[offset + i] = items[i];
   }
-
-  return array;
 };
 
 /**
@@ -31,9 +29,15 @@ var flatten = function flatten(array) {
     return [array];
   }
 
-  return array.reduce(function (res, item) {
-    return pushToArray(res, isArray(item) ? flatten(item) : [item]);
-  }, []);
+  var res = [];
+
+  for (var i = 0; i < array.length; i++) {
+    var item = array[i];
+
+    pushToArray(res, isArray(item) ? flatten(item) : [item]);
+  }
+
+  return res;
 };
 
 exports["default"] = flatten;
