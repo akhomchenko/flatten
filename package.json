@@ -1,0 +1,23 @@
+{
+  "name": "flatten",
+  "version": "0.1.0",
+  "description": "Flattens arrays",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^3.1.23",
+    "benchmark": "^1.0.0",
+    "chai": "^3.0.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-mocha": "^2.1.2",
+    "lodash.flatten": "^3.0.2"
+  }
+}
